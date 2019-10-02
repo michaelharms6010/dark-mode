@@ -21,7 +21,7 @@ const App = () => {
   }, []);
 
   const [mode, toggleMode] = useDarkMode('dark-mode', false);
-
+  
 
   return (
     <div className={`App ${(mode === true ? 'dark-mode' : '')}`}>
@@ -29,7 +29,7 @@ const App = () => {
         toggleMode={toggleMode}
         darkMode={mode}
       />
-      <Charts coinData={coinData} />
+      <Charts coinData={coinData} darkMode={mode} />
     </div>
   );
 };
